@@ -2304,12 +2304,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Frame/Base/BaseFile/Frame-Bridging-Header.pch";
 				INFOPLIST_FILE = Frame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_KEY_CFBundleDisplayName = "房贷计算器";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mpaas.yusys.sdbankAm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fenghanxu.MortgageCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Frame/Base/BaseFile/Frame-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2334,12 +2335,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Frame/Base/BaseFile/Frame-Bridging-Header.pch";
 				INFOPLIST_FILE = Frame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_KEY_CFBundleDisplayName = "房贷计算器";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mpaas.yusys.sdbankAm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fenghanxu.MortgageCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Frame/Base/BaseFile/Frame-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

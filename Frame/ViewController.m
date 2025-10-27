@@ -21,22 +21,10 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIImage *image = [UIImage imageNamed:@"home_search_normal"];
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:image
-                                                                  style:UIBarButtonItemStylePlain
-                                                                 target:self
-                                                                 action:@selector(buttonTapped)];
-    self.navigationItem.rightBarButtonItem = rightItem;
 
     
 }
 
--(void)buttonTapped {
-    NSArray *array = @[@"导出KML",@"导出GEMJSON"];
-    
-    [SideAssistView showWithTestActionView:win withArray:array withBlock:^(NSString * _Nonnull value) {
-        
-    }];
-}
+
 
 @end

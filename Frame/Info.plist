@@ -21,9 +21,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>是否允许拿货商城开启相机拍照以便选取证件图片</string>
+	<string>是否允许房贷计算器开启相机拍照以便选取证件图片</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>是否允许拿货商城打开相册以便你选择要发送证件图片</string>
+	<string>是否允许房贷计算器打开相册以便你选择要发送证件图片</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
