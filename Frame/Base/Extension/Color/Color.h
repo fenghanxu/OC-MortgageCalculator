@@ -61,6 +61,9 @@ NS_ASSUME_NONNULL_BEGIN
 //秒杀已抢光颜色
 @property(class, nonatomic, strong, readonly) UIColor *robed;
 
+@property(class, nonatomic, strong, readonly) UIColor *tabbarTtitle;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

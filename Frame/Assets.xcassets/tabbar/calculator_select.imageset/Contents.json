@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "header.JPG",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "calculator_select@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

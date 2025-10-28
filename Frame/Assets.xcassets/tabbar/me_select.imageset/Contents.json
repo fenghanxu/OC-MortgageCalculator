@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "Yosemite04.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "me_select@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

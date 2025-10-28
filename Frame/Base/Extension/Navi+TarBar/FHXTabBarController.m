@@ -47,7 +47,7 @@
     
     [vc.tabBarItem setTitleTextAttributes:@{
                                             NSFontAttributeName : [UIFont systemFontOfSize:12],
-                                            NSForegroundColorAttributeName : [Color textBlank]
+                                            NSForegroundColorAttributeName : [Color tabbarTtitle]
                                             } forState:UIControlStateNormal];
     
 

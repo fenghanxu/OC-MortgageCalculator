@@ -16,7 +16,7 @@
 }
 
 + (UIColor *)theme{
-  return [UIColor colorWithHexString:@"#cd001e"];
+  return [UIColor colorWithHexString:@"#3CB371"];
 }
 
 + (UIColor *)themeLight{
@@ -102,5 +102,10 @@
 + (UIColor *)robed{
   return [UIColor colorWithHexString:@"#e56a7e"];
 }
+
++ (UIColor *)tabbarTtitle{
+  return [UIColor colorWithHexString:@"#a7a7a7"];
+}
+
 
 @end
