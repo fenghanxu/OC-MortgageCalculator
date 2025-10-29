@@ -20,15 +20,15 @@
 }
 
 + (UIColor *)themeLight{
-  return [UIColor colorWithHexString:@"#ff5000"];
+  return [UIColor colorWithHexString:@"#7FFFAA"];
 }
 
 + (UIColor *)themeShallow{
-  return [UIColor colorWithHexString:@"#F08080"];
+  return [UIColor colorWithHexString:@"#CFFFDD"];
 }
 
 + (UIColor *)themeWeak{
-  return [UIColor colorWithHexString:@"#fcf0f2"];
+  return [UIColor colorWithHexString:@"#EBFFF5"];
 }
 
 + (UIColor *)textBlank{
@@ -63,49 +63,12 @@
   return [UIColor colorWithHexString:@"#f4a400"];
 }
 
-+ (UIColor *)greenLight{
-  return [UIColor colorWithHexString:@"#82a542"];
-}
-
-+ (UIColor *)greenDeep{
-  return [UIColor colorWithHexString:@"#6d7b52"];
-}
-
-+ (UIColor *)greenDeepLight{
-  return [UIColor colorWithHexString:@"#75953c"];
-}
-
-+ (UIColor *)royalBlue{
-  return [UIColor colorWithHexString:@"#4169E1"];
-}
-
-+ (UIColor *)bisque{
-  return [UIColor colorWithHexString:@"#FAEBD7"];
-}
-
-+ (UIColor *)limeGreen{
-  return [UIColor colorWithHexString:@"#3CB371"];
-}
-
-+ (UIColor *)doderBlue{
-  return [UIColor colorWithHexString:@"#00A4E3"];
-}
-
-+ (UIColor *)tan{
-  return [UIColor colorWithHexString:@"#A58561"];
-}
-
 + (UIColor *)textTheme{
   return [UIColor colorWithHexString:@"#010101"];
-}
-
-+ (UIColor *)robed{
-  return [UIColor colorWithHexString:@"#e56a7e"];
 }
 
 + (UIColor *)tabbarTtitle{
   return [UIColor colorWithHexString:@"#a7a7a7"];
 }
-
 
 @end
