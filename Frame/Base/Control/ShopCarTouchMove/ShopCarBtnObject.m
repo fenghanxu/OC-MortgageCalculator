@@ -51,8 +51,8 @@
       center.x= [GetVC getCurrentViewController].view.bounds.size.width-25;
     }
     //判断纵坐标是否超出屏幕
-    if(center.y <= statusHeight + 64+25) {
-      center.y = statusHeight + 64+25;
+    if(center.y <= STATUS_BAR_HEIGHT + 64+25) {
+      center.y = STATUS_BAR_HEIGHT + 64+25;
     } else if(center.y>= [GetVC getCurrentViewController].view.bounds.size.height-25) {
       center.y= [GetVC getCurrentViewController].view.bounds.size.height-25;
     }

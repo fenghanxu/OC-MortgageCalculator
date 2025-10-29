@@ -26,16 +26,16 @@
 
 - (instancetype)init {
     CGFloat bottom = 100 + 38;
-    if (kIsNotchScreen) {
+    if (HAS_NOTCH) {
         bottom += 20;
     }
-    return [self initWithImage:@"safecenter_main" top:statusHeight bottom:bottom frame:CGRectMake(0, screenHeight - bottom, 110, 38)];
+    return [self initWithImage:@"safecenter_main" top:STATUS_BAR_HEIGHT bottom:bottom frame:CGRectMake(0, SCREEN_HEIGHT - bottom, 110, 38)];
 }
 - (instancetype)initWithImage:(NSString *)name top:(CGFloat)top bottom:(CGFloat)bottom frame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         minTop = top;
-        maxTop = screenHeight - bottom;
+        maxTop = SCREEN_HEIGHT - bottom;
         self.frame = frame;
         UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:name]];
         imageView.frame = self.bounds;
@@ -52,10 +52,10 @@
 
 - (void)moveToDefaultPosition {
     CGRect frame = self.frame;
-    if (frame.origin.x <= (screenWidth - frame.size.width) / 2) {
+    if (frame.origin.x <= (SCREEN_WIDTH - frame.size.width) / 2) {
         frame.origin.x = 0;
     } else {
-        frame.origin.x = screenWidth - frame.size.width;
+        frame.origin.x = SCREEN_WIDTH - frame.size.width;
     }
     if (frame.origin.y < minTop) {
         frame.origin.y = minTop;

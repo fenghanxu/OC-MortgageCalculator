@@ -33,7 +33,7 @@
     }
   }
   if (!isLogin) { return [FHXWaterMarkView new]; }
-  FHXWaterMarkView *watermark = [[FHXWaterMarkView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight) WithText:markText];
+  FHXWaterMarkView *watermark = [[FHXWaterMarkView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) WithText:markText];
   [view addSubview:watermark];
   return watermark;
 }
@@ -49,7 +49,7 @@
     }
   }
   if (!isLogin) { return [FHXWaterMarkView new]; }
-  FHXWaterMarkView *watermark = [[FHXWaterMarkView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight) WithText:markText];
+  FHXWaterMarkView *watermark = [[FHXWaterMarkView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) WithText:markText];
   [[GetVC getCurrentViewController].view addSubview:watermark];
   return watermark;
 }
@@ -67,7 +67,7 @@
       }
     }
     if (!isLogin) { return [FHXWaterMarkView new]; }    
-    FHXWaterMarkView *watermark = [[FHXWaterMarkView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight) WithText:markText];
+    FHXWaterMarkView *watermark = [[FHXWaterMarkView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) WithText:markText];
     [window addSubview:watermark];
     return watermark;
 }
@@ -110,7 +110,7 @@
         CGContextRef context = UIGraphicsGetCurrentContext();
       
         //清除画布
-        CGContextClearRect(context, CGRectMake(0, 0, screenWidth, screenHeight));
+        CGContextClearRect(context, CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT));
         
         //将绘制原点（0，0）调整到原image的中心
         CGContextConcatCTM(context, CGAffineTransformMakeTranslation(viewWidth/2, viewHeight/2));

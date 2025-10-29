@@ -29,7 +29,7 @@
     CGFloat navHeight = [GetVC getCurrentViewController].navigationController.navigationBar.frame.size.height;
     self.callBlock = callBlock;
     self.array     = array;
-    self.topHeight = statusHeight + navHeight;
+    self.topHeight = TOTAL_TOP_HEIGHT([GetVC getCurrentViewController]);
     [self buildUI];
     return self;
 }
@@ -47,7 +47,7 @@
     
     self.bgView = [UIView new];
     self.bgView.alpha = 0.f;
-    self.bgView.addTo(self).bgColor([UIColor colorWithHexString:@"0x656666"]).borderRadius(5).xywh(screenWidth-135,self.topHeight+10,120,0);
+    self.bgView.addTo(self).bgColor([UIColor colorWithHexString:@"0x656666"]).borderRadius(5).xywh(SCREEN_WIDTH-135,self.topHeight+10,120,0);
     
     // 循环创建按钮
     for (NSInteger i = 0; i < self.array.count; i++) {
@@ -77,14 +77,14 @@
     self.hidden = NO;
     [UIView animateWithDuration:0.2f animations:^{
         self.bgView.alpha = 1.f;
-        self.bgView.xywh(screenWidth-135,self.topHeight+10,120,bgViewHeight);
+        self.bgView.xywh(SCREEN_WIDTH-135,self.topHeight+10,120,bgViewHeight);
     }];
 }
 
 -(void)dismiss{
     [UIView animateWithDuration:0.2f animations:^{
         self.bgView.alpha = 0.f;
-        self.bgView.xywh(screenWidth-135,self.topHeight+10,120,0);
+        self.bgView.xywh(SCREEN_WIDTH-135,self.topHeight+10,120,0);
     } completion:^(BOOL finished) {
         self.hidden = YES;
         [self removeFromSuperview];

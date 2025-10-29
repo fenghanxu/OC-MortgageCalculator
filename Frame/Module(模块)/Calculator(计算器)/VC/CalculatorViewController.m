@@ -73,14 +73,14 @@
     self.scrollView = [UIScrollView new];
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.showsVerticalScrollIndicator = NO;
-    self.scrollView.contentSize = CGSizeMake(screenWidth, 1000);
+    self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH, 1000);
     self.scrollView.addTo(self.view).makeCons(^{
         make.left.top.right.bottom.equal.view(self.view);
     });
 
     self.containerView = [UIView new];
     self.containerView.backgroundColor = [UIColor colorWithHexString:@"0xF9FAFB"];
-    self.containerView.frame = CGRectMake(0, 0, screenWidth, 1000);
+    self.containerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 1000);
     [self.scrollView addSubview:self.containerView];
     
     self.loanMethodView = [UIView new];
@@ -89,7 +89,7 @@
         make.left.equal.view(self.containerView).constants(15);
         make.top.equal.view(self.containerView).constants(15);
         make.height.equal.constants(115);
-        make.width.equal.constants(screenWidth-30);
+        make.width.equal.constants(SCREEN_WIDTH-30);
     });
     
     self.loanMethodViewTitle = [UILabel new];
@@ -102,7 +102,7 @@
     self.businessButton = [UIButton new];
     self.businessButton.addTo(self.loanMethodView).str(@"商业贷款").fnt(14).color([Color theme]).bgColor([Color themeWeak]).borderRadius(8).border(1, [Color theme]).makeCons(^{
         make.left.equal.view(self.loanMethodView).constants(15);
-        make.width.equal.constants((screenWidth-15*6) * 0.333);
+        make.width.equal.constants((SCREEN_WIDTH-15*6) * 0.333);
         make.height.equal.constants(40);
         make.top.equal.view(self.loanMethodViewTitle).bottom.constants(15);
     });
@@ -110,7 +110,7 @@
     self.providentFundButton = [UIButton new];
     self.providentFundButton.addTo(self.loanMethodView).str(@"公积金贷款").fnt(14).color([Color textSub]).bgColor([UIColor whiteColor]).borderRadius(8).border(1, [Color line]).makeCons(^{
         make.left.equal.view(self.businessButton).right.constants(15);
-        make.width.equal.constants((screenWidth-15*6) * 0.333);
+        make.width.equal.constants((SCREEN_WIDTH-15*6) * 0.333);
         make.height.equal.constants(40);
         make.top.equal.view(self.businessButton);
     });
@@ -118,7 +118,7 @@
     self.combinationButton = [UIButton new];
     self.combinationButton.addTo(self.loanMethodView).str(@"组合贷款").fnt(14).color([Color textSub]).bgColor([UIColor whiteColor]).borderRadius(8).border(1, [Color line]).makeCons(^{
         make.left.equal.view(self.providentFundButton).right.constants(15);
-        make.width.equal.constants((screenWidth-15*6) * 0.333);
+        make.width.equal.constants((SCREEN_WIDTH-15*6) * 0.333);
         make.height.equal.constants(40);
         make.top.equal.view(self.businessButton);
     });
@@ -129,7 +129,7 @@
         make.left.equal.view(self.containerView).constants(15);
         make.top.equal.view(self.loanMethodView).bottom.constants(15);
         make.height.equal.constants(115);
-        make.width.equal.constants(screenWidth-30);
+        make.width.equal.constants(SCREEN_WIDTH-30);
     });
     
     self.calculateViewTitle = [UILabel new];
@@ -142,7 +142,7 @@
     self.interestButton = [UIButton new];
     self.interestButton.addTo(self.calculateView).str(@"等额本金").fnt(14).color([Color theme]).bgColor([Color themeWeak]).borderRadius(8).border(1, [Color theme]).makeCons(^{
         make.left.equal.view(self.calculateView).constants(15);
-        make.width.equal.constants((screenWidth-15*6) * 0.333);
+        make.width.equal.constants((SCREEN_WIDTH-15*6) * 0.333);
         make.height.equal.constants(40);
         make.top.equal.view(self.calculateViewTitle).bottom.constants(15);
     });
@@ -150,7 +150,7 @@
     self.principalButton = [UIButton new];
     self.principalButton.addTo(self.calculateView).str(@"等额本金").fnt(14).color([Color textSub]).bgColor([UIColor whiteColor]).borderRadius(8).border(1, [Color line]).makeCons(^{
         make.left.equal.view(self.interestButton).right.constants(15);
-        make.width.equal.constants((screenWidth-15*6) * 0.333);
+        make.width.equal.constants((SCREEN_WIDTH-15*6) * 0.333);
         make.height.equal.constants(40);
         make.top.equal.view(self.interestButton);
     });
@@ -158,7 +158,7 @@
     self.inAdvanceButton = [UIButton new];
     self.inAdvanceButton.addTo(self.calculateView).str(@"提前还款").fnt(14).color([Color textSub]).bgColor([UIColor whiteColor]).borderRadius(8).border(1, [Color line]).makeCons(^{
         make.left.equal.view(self.principalButton).right.constants(15);
-        make.width.equal.constants((screenWidth-15*6) * 0.333);
+        make.width.equal.constants((SCREEN_WIDTH-15*6) * 0.333);
         make.height.equal.constants(40);
         make.top.equal.view(self.interestButton);
     });
@@ -169,7 +169,7 @@
         make.left.equal.view(self.containerView).constants(15);
         make.top.equal.view(self.calculateView).bottom.constants(15);
         make.height.equal.constants(580);
-        make.width.equal.constants(screenWidth-30);
+        make.width.equal.constants(SCREEN_WIDTH-30);
     });
     
     self.loanMessageTitle = [UILabel new];
@@ -225,7 +225,7 @@
     self.loanAmountSlider.makeCons(^{
         make.top.equal.view(self.loanAmountTextField).bottom.constants(20);
         make.centerX.equal.view(self.view);
-        make.width.equal.constants(screenWidth-60);
+        make.width.equal.constants(SCREEN_WIDTH-60);
         make.height.equal.constants(10);
     });
 
@@ -290,7 +290,7 @@
     self.loanTermSlider.makeCons(^{
         make.top.equal.view(self.loanTermTextField).bottom.constants(20);
         make.centerX.equal.view(self.view);
-        make.width.equal.constants(screenWidth-60);
+        make.width.equal.constants(SCREEN_WIDTH-60);
         make.height.equal.constants(10);
     });
 
@@ -351,7 +351,7 @@
         make.top.equal.view(self.loanInterestRateTextField).bottom.constants(10);
         make.left.equal.view(self.loanMessageView).constants(15);
         make.height.equal.constants(36);
-        make.width.equal.constants((screenWidth-90)*0.25);
+        make.width.equal.constants((SCREEN_WIDTH-90)*0.25);
     });
     
     self.loanInterestRateButton_1 = [UIButton new];
@@ -359,7 +359,7 @@
         make.top.equal.view(self.loanInterestRateTextField).bottom.constants(10);
         make.left.equal.view(self.loanInterestRateButton_0).right.constants(10);
         make.height.equal.constants(36);
-        make.width.equal.constants((screenWidth-90)*0.25);
+        make.width.equal.constants((SCREEN_WIDTH-90)*0.25);
     });
     
     self.loanInterestRateButton_2 = [UIButton new];
@@ -367,7 +367,7 @@
         make.top.equal.view(self.loanInterestRateTextField).bottom.constants(10);
         make.left.equal.view(self.loanInterestRateButton_1).right.constants(10);
         make.height.equal.constants(36);
-        make.width.equal.constants((screenWidth-90)*0.25);
+        make.width.equal.constants((SCREEN_WIDTH-90)*0.25);
     });
     
     self.loanInterestRateButton_3 = [UIButton new];
@@ -375,7 +375,7 @@
         make.top.equal.view(self.loanInterestRateTextField).bottom.constants(10);
         make.left.equal.view(self.loanInterestRateButton_2).right.constants(10);
         make.height.equal.constants(36);
-        make.width.equal.constants((screenWidth-90)*0.25);
+        make.width.equal.constants((SCREEN_WIDTH-90)*0.25);
     });
     
     self.calculatorButton = [UIButton new];

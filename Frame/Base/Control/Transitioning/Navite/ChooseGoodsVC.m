@@ -51,7 +51,7 @@
   UIView *view = [UIView new];
   view.addTo(self.bgBtn).bgColor([UIColor redColor]).makeCons(^{
     make.left.bottom.right.equal.view(self.bgBtn);
-    make.height.equal.constants(screenHeight*0.5);
+    make.height.equal.constants(SCREEN_HEIGHT*0.5);
   });
   
 }

@@ -20,8 +20,8 @@
 
 - (CGFloat)ratioH{
   if (_ratioH == 0) {
-    if (kIsNotchScreen) { _ratioH = 1; }
-    _ratioH = screenHeight/667;
+    if (HAS_NOTCH) { _ratioH = 1; }
+    _ratioH = SCREEN_HEIGHT/667;
   }
   return _ratioH;
 }
@@ -65,17 +65,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    CGFloat topHeight = screenHeight- 425*self.ratioH;
+    CGFloat topHeight = SCREEN_HEIGHT- 425*self.ratioH;
     self.bgBtn = [UIButton new];
     self.bgBtn.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
-    self.bgBtn.addTo(self.view).frame = CGRectMake(0, 0, screenWidth, topHeight);
+    self.bgBtn.addTo(self.view).frame = CGRectMake(0, 0, SCREEN_WIDTH, topHeight);
     self.bgBtn.addTo(self.view).onClick(^{
       [self dismissViewControllerAnimated:YES completion:nil];
     });
 
     self.buyGoodView = [UIView new];
     self.buyGoodView.addTo(self.bgBtn).bgColor([UIColor redColor]);
-    self.buyGoodView.frame = CGRectMake(0, topHeight, screenWidth, screenHeight-topHeight);
+    self.buyGoodView.frame = CGRectMake(0, topHeight, SCREEN_WIDTH, SCREEN_HEIGHT-topHeight);
 }
 
 #pragma mark - UIViewControllerTransitioningDelegate

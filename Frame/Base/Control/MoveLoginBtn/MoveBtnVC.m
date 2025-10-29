@@ -41,8 +41,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.rect = CGRectMake(screenWidth-widthAheight, screenHeight-safeBottom-widthAheight-100, widthAheight, widthAheight);
-    self.loginBtn = [[SafeCenterButton alloc] initWithImage:@"loginBtn" top:statusHeight bottom:safeBottom frame:self.rect];
+    self.rect = CGRectMake(SCREEN_WIDTH-widthAheight, SCREEN_HEIGHT-safeBottom-widthAheight-100, widthAheight, widthAheight);
+    self.loginBtn = [[SafeCenterButton alloc] initWithImage:@"loginBtn" top:STATUS_BAR_HEIGHT bottom:safeBottom frame:self.rect];
     self.loginBtn.delegate = self;
     [self.view addSubview:self.loginBtn];
     if (NO) {//虽然现实，但是还有一个前提  判断是否登录
