@@ -6,7 +6,7 @@
 //
 
 /**
- [self.monthlyPaymentView az_setGradientBackgroundWithColors:@[[UIColor colorWithHexString:@"0x228B22"], [Color theme]] locations:nil startPoint:CGPointMake(1, 0) endPoint:CGPointMake(0, 1)];
+
  */
 
 #import "CalculatorViewController.h"
