@@ -5,10 +5,6 @@
 //  Created by 冯汉栩 on 2025/10/28.
 //
 
-/**
-
- */
-
 #import "CalculatorViewController.h"
 
 @interface CalculatorViewController ()<UITextFieldDelegate>
@@ -75,7 +71,8 @@
     self.scrollView.showsVerticalScrollIndicator = NO;
     self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH, 1000);
     self.scrollView.addTo(self.view).makeCons(^{
-        make.left.top.right.bottom.equal.view(self.view);
+        make.top.equal.view(self.view).constants(TOTAL_TOP_HEIGHT(self));
+        make.left.right.bottom.equal.view(self.view);
     });
 
     self.containerView = [UIView new];

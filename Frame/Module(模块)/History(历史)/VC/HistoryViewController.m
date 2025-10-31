@@ -58,7 +58,7 @@
     self.view.backgroundColor = [UIColor colorWithHexString:@"0xF9FAFB"];
 
     self.tableView.makeCons(^{
-        make.top.equal.view(self.view);
+        make.top.equal.view(self.view).constants(TOTAL_TOP_HEIGHT(self));
         make.left.equal.view(self.view);
         make.right.equal.view(self.view);
         make.bottom.equal.view(self.view);
