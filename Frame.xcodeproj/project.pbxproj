@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D102D0D2EB34410001ECD4C /* CollectViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D102D0C2EB34410001ECD4C /* CollectViewCell.m */; };
+		2D102D112EB35BF0001ECD4C /* UIButton+SFSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D102D0F2EB35BF0001ECD4C /* UIButton+SFSButton.m */; };
+		2D102D142EB35E7D001ECD4C /* HistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D102D132EB35E7D001ECD4C /* HistoryCell.m */; };
+		2D102D172EB36379001ECD4C /* HistoryHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D102D162EB36379001ECD4C /* HistoryHeaderView.m */; };
 		2D1A62172DAE07F700ACAF6E /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A62052DAE07F700ACAF6E /* MJPropertyType.m */; };
 		2D1A62182DAE07F700ACAF6E /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A62082DAE07F700ACAF6E /* NSObject+MJKeyValue.m */; };
 		2D1A62192DAE07F700ACAF6E /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A62092DAE07F700ACAF6E /* MJProperty.m */; };
@@ -191,6 +195,14 @@
 
 /* Begin PBXFileReference section */
 		03351BF5F8F17E8147C5D197 /* libPods-Frame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Frame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D102D0B2EB34410001ECD4C /* CollectViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectViewCell.h; sourceTree = "<group>"; };
+		2D102D0C2EB34410001ECD4C /* CollectViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectViewCell.m; sourceTree = "<group>"; };
+		2D102D0E2EB35BF0001ECD4C /* UIButton+SFSButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+SFSButton.h"; sourceTree = "<group>"; };
+		2D102D0F2EB35BF0001ECD4C /* UIButton+SFSButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SFSButton.m"; sourceTree = "<group>"; };
+		2D102D122EB35E7D001ECD4C /* HistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryCell.h; sourceTree = "<group>"; };
+		2D102D132EB35E7D001ECD4C /* HistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryCell.m; sourceTree = "<group>"; };
+		2D102D152EB36379001ECD4C /* HistoryHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryHeaderView.h; sourceTree = "<group>"; };
+		2D102D162EB36379001ECD4C /* HistoryHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryHeaderView.m; sourceTree = "<group>"; };
 		2D1A62022DAE07F700ACAF6E /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
 		2D1A62032DAE07F700ACAF6E /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
 		2D1A62042DAE07F700ACAF6E /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
@@ -553,6 +565,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D102D102EB35BF0001ECD4C /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				2D102D0E2EB35BF0001ECD4C /* UIButton+SFSButton.h */,
+				2D102D0F2EB35BF0001ECD4C /* UIButton+SFSButton.m */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		2D1A62012DAE07F700ACAF6E /* MJExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -1201,6 +1222,8 @@
 		2DA122802EB0BCC900574D35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2D102D0B2EB34410001ECD4C /* CollectViewCell.h */,
+				2D102D0C2EB34410001ECD4C /* CollectViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1234,6 +1257,10 @@
 		2DA122862EB0BCC900574D35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2D102D122EB35E7D001ECD4C /* HistoryCell.h */,
+				2D102D132EB35E7D001ECD4C /* HistoryCell.m */,
+				2D102D152EB36379001ECD4C /* HistoryHeaderView.h */,
+				2D102D162EB36379001ECD4C /* HistoryHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1630,6 +1657,7 @@
 		2DEA416D25D00EC0008FA2A8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2D102D102EB35BF0001ECD4C /* Button */,
 				2D90FBB62D9B8C230069B747 /* TimeDisplayHelper */,
 				2D94B5B92D803645001F42EE /* MDImageColor */,
 				2D94B5B02D80353C001F42EE /* AnimationManager */,
@@ -2188,6 +2216,7 @@
 				2DC394D725D3785B00A72BCB /* FHXAnnotation.m in Sources */,
 				2D7B883C25D5575A0079E4CE /* TAPageControl.m in Sources */,
 				2DFB30A325D0FE5100F74164 /* BinarySystem.m in Sources */,
+				2D102D112EB35BF0001ECD4C /* UIButton+SFSButton.m in Sources */,
 				2D7B89DF25D6855A0079E4CE /* AdvertiseGradientView.m in Sources */,
 				2D7B89A125D63FBC0079E4CE /* SelectTimeAreaViewItem.m in Sources */,
 				2DEA416925D00BC9008FA2A8 /* BaseNetWork.m in Sources */,
@@ -2232,6 +2261,7 @@
 				2D7B884A25D6130F0079E4CE /* FHXIndexBannerSubiew.m in Sources */,
 				2D9A4D592DCDAC0000D551ED /* ImagePickerHelper.m in Sources */,
 				7A19F1B226D8EBC300D249E6 /* LocationManager.m in Sources */,
+				2D102D142EB35E7D001ECD4C /* HistoryCell.m in Sources */,
 				2DFB30EF25D15A4800F74164 /* FHXCollectionViewFlowLayout.m in Sources */,
 				2DFB30C825D1421800F74164 /* UIColor+Hex.m in Sources */,
 				2D7B884925D6130F0079E4CE /* FHXCustomBannerView.m in Sources */,
@@ -2246,6 +2276,7 @@
 				2DFB30C925D1421800F74164 /* Color.m in Sources */,
 				2D3B052C25D4F43E00A932C2 /* UIScrollView+WaterMarkView.m in Sources */,
 				2D94B5C12D803645001F42EE /* ImageColorModel.m in Sources */,
+				2D102D172EB36379001ECD4C /* HistoryHeaderView.m in Sources */,
 				2DE690BD25D7CCC60073B9CE /* FHXResourceSheetView.m in Sources */,
 				2D1A621F2DAE07F700ACAF6E /* MJPropertyKey.m in Sources */,
 				2DE4FC7525D24F7D007C208F /* NSArray+Safe.m in Sources */,
@@ -2254,6 +2285,7 @@
 				2D7B884B25D6130F0079E4CE /* FHXNewPagedFlowView.m in Sources */,
 				2D7B89AE25D643660079E4CE /* NSCalendar+FHXCalendar.m in Sources */,
 				2DE4FC4B25D24BA0007C208F /* Single.m in Sources */,
+				2D102D0D2EB34410001ECD4C /* CollectViewCell.m in Sources */,
 				2DEA418225D0D284008FA2A8 /* FHXCancelHightBtn.m in Sources */,
 				2D7B899C25D63FBC0079E4CE /* FHXDateWithTimePickerView.m in Sources */,
 				2D7B89A525D63FBC0079E4CE /* FHXMaskBtn.m in Sources */,

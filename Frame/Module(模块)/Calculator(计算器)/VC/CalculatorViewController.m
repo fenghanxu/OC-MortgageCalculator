@@ -85,6 +85,11 @@
     
     self.loanMethodView = [UIView new];
     self.loanMethodView.backgroundColor = [UIColor whiteColor];
+    self.loanMethodView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.loanMethodView.layer.shadowOffset = CGSizeMake(0, 2);
+    self.loanMethodView.layer.shadowOpacity = 0.1;
+    self.loanMethodView.layer.shadowRadius = 3;
+    self.loanMethodView.layer.masksToBounds = NO;
     self.loanMethodView.addTo(self.containerView).borderRadius(8).makeCons(^{
         make.left.equal.view(self.containerView).constants(15);
         make.top.equal.view(self.containerView).constants(15);
@@ -125,6 +130,11 @@
     
     self.calculateView = [UIView new];
     self.calculateView.backgroundColor = [UIColor whiteColor];
+    self.calculateView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.calculateView.layer.shadowOffset = CGSizeMake(0, 2);
+    self.calculateView.layer.shadowOpacity = 0.1;
+    self.calculateView.layer.shadowRadius = 3;
+    self.calculateView.layer.masksToBounds = NO;
     self.calculateView.addTo(self.containerView).borderRadius(8).makeCons(^{
         make.left.equal.view(self.containerView).constants(15);
         make.top.equal.view(self.loanMethodView).bottom.constants(15);
@@ -165,6 +175,11 @@
         
     self.loanMessageView = [UIView new];
     self.loanMessageView.backgroundColor = [UIColor whiteColor];
+    self.loanMessageView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.loanMessageView.layer.shadowOffset = CGSizeMake(0, 2);
+    self.loanMessageView.layer.shadowOpacity = 0.1;
+    self.loanMessageView.layer.shadowRadius = 3;
+    self.loanMessageView.layer.masksToBounds = NO;
     self.loanMessageView.addTo(self.containerView).borderRadius(8).makeCons(^{
         make.left.equal.view(self.containerView).constants(15);
         make.top.equal.view(self.calculateView).bottom.constants(15);

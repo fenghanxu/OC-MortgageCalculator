@@ -6,8 +6,9 @@
 //
 
 #import "CollectViewController.h"
+#import "CollectViewCell.h"
 
-@interface CollectViewController ()
+@interface CollectViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIView       *containerView;
 
@@ -15,9 +16,37 @@
 @property (nonatomic, strong) UIButton *businessLoanButton;
 @property (nonatomic, strong) UIButton *providentFundButton;
 @property (nonatomic, strong) UIButton *combinationLoanButton;
+
+@property (nonatomic,strong) UITableView *tableView;
 @end
 
 @implementation CollectViewController
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] init];
+        _tableView.addTo(self.view);
+        
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.backgroundColor = [UIColor colorWithHexString:@"0xF9FAFB"];
+        _tableView.showsVerticalScrollIndicator = NO;
+        _tableView.showsHorizontalScrollIndicator = NO;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.rowHeight = 200;
+        [_tableView registerClass:[CollectViewCell class] forCellReuseIdentifier:@"CollectViewCellID"];
+        //为解决tableview  Group的问题
+        _tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, CGFLOAT_MIN)];
+        _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, CGFLOAT_MIN)];
+        _tableView.sectionHeaderHeight = CGFLOAT_MIN;
+        _tableView.sectionFooterHeight = CGFLOAT_MIN;
+        //为解决ios11 后tableview刷新跳动的问题
+        _tableView.estimatedRowHeight = 0;
+        _tableView.estimatedSectionHeaderHeight = 0;
+        _tableView.estimatedSectionFooterHeight = 0;
+    }
+    return _tableView;
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -32,6 +61,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"收藏";
+    self.view.backgroundColor = [UIColor colorWithHexString:@"0xF9FAFB"];
 
     self.scrollView = [UIScrollView new];
     self.scrollView.showsHorizontalScrollIndicator = NO;
@@ -82,12 +112,32 @@
         make.height.equal.constants(40);
     });
     
+    self.tableView.makeCons(^{
+        make.top.equal.view(self.scrollView).bottom.constants(0);
+        make.left.equal.view(self.view);
+        make.right.equal.view(self.view);
+        make.bottom.equal.view(self.view);
+    });
+    
 }
 
+#pragma  mark -- UITableViewDataSource, UITableViewDelegate
+//设置行数
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 2;
+}
 
+//cell的内容
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CollectViewCell *cell = [CollectViewCell cellWithTableView:tableView];
+
+    return cell;
+}
+
+//点击cell
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%ld",indexPath.row);
+}
 
 @end
-
-
-
 
