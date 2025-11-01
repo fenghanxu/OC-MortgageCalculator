@@ -171,6 +171,8 @@
 		7ABEB6E926FC66390070BAD6 /* UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABEB6E726FC66390070BAD6 /* UUID.m */; };
 		7AC0BCF326F5E5A900611CF2 /* QRCodeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC0BCF226F5E5A900611CF2 /* QRCodeUtil.m */; };
 		7AC0BCF726F5E5F200611CF2 /* QRCodeScanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC0BCF626F5E5F200611CF2 /* QRCodeScanVC.m */; };
+		8862CDDC2EB4C542003F33C5 /* MeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8862CDDB2EB4C542003F33C5 /* MeButton.m */; };
+		8862CDE22EB615AB003F33C5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8862CDE12EB615AB003F33C5 /* LoginViewController.m */; };
 		B24A8DB92713C1B70021CD31 /* Sandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = B24A8DB72713C1B70021CD31 /* Sandbox.m */; };
 		B2F933E427A4E67D00FC78BB /* NSObject+Chain_hx.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F933E227A4E67D00FC78BB /* NSObject+Chain_hx.m */; };
 		EF2BF7E6882DC4D4911E05D3 /* libPods-Frame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03351BF5F8F17E8147C5D197 /* libPods-Frame.a */; };
@@ -532,6 +534,10 @@
 		7AC0BCF626F5E5F200611CF2 /* QRCodeScanVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanVC.m; sourceTree = "<group>"; };
 		7ACC3A9926DCBDA8008F7F16 /* FontHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontHeader.h; sourceTree = "<group>"; };
 		7ACC3A9A26DCBDA9008F7F16 /* ColorHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorHeader.h; sourceTree = "<group>"; };
+		8862CDDA2EB4C542003F33C5 /* MeButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeButton.h; sourceTree = "<group>"; };
+		8862CDDB2EB4C542003F33C5 /* MeButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeButton.m; sourceTree = "<group>"; };
+		8862CDE02EB615AB003F33C5 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		8862CDE12EB615AB003F33C5 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		B24A8DB72713C1B70021CD31 /* Sandbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sandbox.m; sourceTree = "<group>"; };
 		B24A8DB82713C1B70021CD31 /* Sandbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sandbox.h; sourceTree = "<group>"; };
 		B2F933E227A4E67D00FC78BB /* NSObject+Chain_hx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Chain_hx.m"; sourceTree = "<group>"; };
@@ -1294,6 +1300,8 @@
 		2DA1228C2EB0BCC900574D35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8862CDDA2EB4C542003F33C5 /* MeButton.h */,
+				8862CDDB2EB4C542003F33C5 /* MeButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1311,6 +1319,7 @@
 		2DA1228E2EB0BCC900574D35 /* Module(模块) */ = {
 			isa = PBXGroup;
 			children = (
+				8862CDDF2EB6157F003F33C5 /* Login(登录) */,
 				2DA1227B2EB0BCC900574D35 /* Calculator(计算器) */,
 				2DA122812EB0BCC900574D35 /* Collect(收藏) */,
 				2DA122872EB0BCC900574D35 /* History(历史) */,
@@ -1927,6 +1936,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8862CDDD2EB6157F003F33C5 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				8862CDE02EB615AB003F33C5 /* LoginViewController.h */,
+				8862CDE12EB615AB003F33C5 /* LoginViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		8862CDDE2EB6157F003F33C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8862CDDF2EB6157F003F33C5 /* Login(登录) */ = {
+			isa = PBXGroup;
+			children = (
+				8862CDDD2EB6157F003F33C5 /* VC */,
+				8862CDDE2EB6157F003F33C5 /* View */,
+			);
+			path = "Login(登录)";
+			sourceTree = "<group>";
+		};
 		AD47FB299EBAC9C407FBC4F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2288,10 +2322,12 @@
 				2D102D0D2EB34410001ECD4C /* CollectViewCell.m in Sources */,
 				2DEA418225D0D284008FA2A8 /* FHXCancelHightBtn.m in Sources */,
 				2D7B899C25D63FBC0079E4CE /* FHXDateWithTimePickerView.m in Sources */,
+				8862CDDC2EB4C542003F33C5 /* MeButton.m in Sources */,
 				2D7B89A525D63FBC0079E4CE /* FHXMaskBtn.m in Sources */,
 				2D1A621D2DAE07F700ACAF6E /* NSObject+MJClass.m in Sources */,
 				2DEA410625D002E1008FA2A8 /* SceneDelegate.m in Sources */,
 				2D7B89A225D63FBC0079E4CE /* SelectTimeAreaPickerView.m in Sources */,
+				8862CDE22EB615AB003F33C5 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

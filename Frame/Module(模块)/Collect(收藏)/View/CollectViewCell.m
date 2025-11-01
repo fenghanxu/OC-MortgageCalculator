@@ -10,6 +10,7 @@
 @interface CollectViewCell()
 @property (nonatomic, strong) UIView *bgView;
 @property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIButton *collectionButton;
 @property (nonatomic, strong) UILabel *timeLabel;
 
 @property (nonatomic, strong) UIView *loanAmountView;
@@ -69,6 +70,15 @@
     self.titleLabel.addTo(self.bgView).str(@"商业贷款 - 等额本息").fnt([UIFont boldSystemFontOfSize:14]).makeCons(^{
         make.left.equal.view(self.bgView).constants(15);
         make.top.equal.view(self.bgView).constants(15);
+    });
+    
+    self.collectionButton = [UIButton new];
+    [self.collectionButton setImage:[UIImage imageNamed:@"history_collection_normal"] forState:UIControlStateNormal];
+    [self.collectionButton setImage:[UIImage imageNamed:@"history_collection_select"] forState:UIControlStateSelected];
+    self.collectionButton.addTo(self.bgView).makeCons(^{
+        make.right.equal.view(self.bgView).constants(-15);
+        make.centerY.equal.view(self.titleLabel);
+        make.width.height.equal.constants(30);
     });
     
     self.timeLabel = [UILabel new];
@@ -154,7 +164,7 @@
     self.detailButton = [UIButton new];
     self.detailButton.lSpace = 5;
     [self.detailButton l_beginAdjustContentWithLContentAdjustType:LContentAdjustImageRightTitleLeft];
-    self.detailButton.addTo(self.bgView).img(@"detail_collection").str(@"查看详情").fnt(14).color([UIColor blueColor]).makeCons(^{
+    self.detailButton.addTo(self.bgView).img(@"collection_detail").str(@"查看详情").fnt(14).color([Color theme]).makeCons(^{
         make.right.equal.view(self.bgView).constants(-15);
         make.centerY.equal.view(self.monthlyPayment);
         make.width.equal.constants(90);

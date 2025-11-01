@@ -6,6 +6,7 @@
 //
 
 #import "MeViewController.h"
+#import "MeButton.h"
 
 @interface MeViewController ()
 @property (nonatomic,strong) UIScrollView *scrollView;
@@ -19,9 +20,17 @@
 
 @property (nonatomic, strong) UIView *functionView;
 @property (nonatomic, strong) UILabel *functionTitleLabel;
+@property (nonatomic, strong) MeButton *collectionButton;
+@property (nonatomic, strong) MeButton *historyButton;
+@property (nonatomic, strong) MeButton *interestRateButton;
+@property (nonatomic, strong) MeButton *knowledgeButton;
 
 @property (nonatomic, strong) UIView *settingView;
 @property (nonatomic, strong) UILabel *settingTitleLabel;
+@property (nonatomic, strong) MeButton *ousButton;
+@property (nonatomic, strong) MeButton *helpButton;
+@property (nonatomic, strong) MeButton *policyButton;
+@property (nonatomic, strong) MeButton *cacheButton;
 @end
 
 @implementation MeViewController
@@ -38,7 +47,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我的";
     self.view.backgroundColor = [UIColor colorWithHexString:@"0xF9FAFB"];
     
     self.scrollView = [UIScrollView new];
@@ -107,7 +115,7 @@
         make.left.equal.view(self.containerView).constants(15);
         make.right.equal.view(self.containerView).constants(-15);
         make.top.equal.view(self.loginView).bottom.constants(20);
-        make.height.equal.constants(250);
+        make.height.equal.constants(237);
     });
     
     self.functionTitleLabel = [UILabel new];
@@ -115,6 +123,51 @@
     self.functionTitleLabel.addTo(self.functionView).str(@"功能导航").fnt([UIFont boldSystemFontOfSize:14]).makeCons(^{
         make.left.equal.view(self.functionView).constants(15);
         make.top.equal.view(self.functionView).constants(15);
+    });
+    
+    self.collectionButton = [MeButton new];
+    self.collectionButton.imageColor = [UIColor colorWithHexString:@"0xFEF9C3"];
+    self.collectionButton.title = @"收藏记录";
+    self.collectionButton.showArrow = YES;
+    self.collectionButton.imageName = @"me_collection";
+    self.collectionButton.addTo(self.functionView).makeCons(^{
+        make.left.right.equal.view(self.functionView);
+        make.height.equal.constants(44);
+        make.top.equal.view(self.functionTitleLabel).bottom.constants(15);
+    });
+    
+    self.historyButton = [MeButton new];
+    self.historyButton.imageColor = [UIColor colorWithHexString:@"0xDBEAFE"];
+    self.historyButton.title = @"历史计算";
+    self.historyButton.imageName = @"me_history";
+    self.historyButton.showArrow = YES;
+    self.historyButton.addTo(self.functionView).makeCons(^{
+        make.left.right.equal.view(self.functionView);
+        make.height.equal.constants(44);
+        make.top.equal.view(self.collectionButton).bottom.constants(0);
+    });
+    
+    self.interestRateButton = [MeButton new];
+    self.interestRateButton.imageColor = [UIColor colorWithHexString:@"0xDCFCE7"];
+    self.interestRateButton.title = @"最新利率";
+    self.interestRateButton.imageName = @"me_interestRate";
+    self.interestRateButton.showArrow = YES;
+    self.interestRateButton.addTo(self.functionView).makeCons(^{
+        make.left.right.equal.view(self.functionView);
+        make.height.equal.constants(44);
+        make.top.equal.view(self.historyButton).bottom.constants(0);
+    });
+    
+    
+    self.knowledgeButton = [MeButton new];
+    self.knowledgeButton.imageColor = [UIColor colorWithHexString:@"0xF3E8FF"];
+    self.knowledgeButton.title = @"房产知识";
+    self.knowledgeButton.imageName = @"me_knowledge";
+    self.knowledgeButton.showArrow = YES;
+    self.knowledgeButton.addTo(self.functionView).makeCons(^{
+        make.left.right.equal.view(self.functionView);
+        make.height.equal.constants(44);
+        make.top.equal.view(self.interestRateButton).bottom.constants(0);
     });
     
     self.settingView = [UIView new];
@@ -127,15 +180,59 @@
         make.left.equal.view(self.containerView).constants(15);
         make.right.equal.view(self.containerView).constants(-15);
         make.top.equal.view(self.functionView).bottom.constants(20);
-        make.height.equal.constants(250);
+        make.height.equal.constants(237);
     });
-    
     
     self.settingTitleLabel = [UILabel new];
     self.settingTitleLabel.textColor = [UIColor blackColor];
     self.settingTitleLabel.addTo(self.settingView).str(@"系统设置").fnt([UIFont boldSystemFontOfSize:14]).makeCons(^{
         make.left.equal.view(self.settingView).constants(15);
         make.top.equal.view(self.settingView).constants(15);
+    });
+    
+    self.ousButton = [MeButton new];
+    self.ousButton.imageColor = [UIColor colorWithHexString:@"0xF3F4F6"];
+    self.ousButton.title = @"关于我们";
+    self.ousButton.imageName = @"me_our";
+    self.ousButton.showArrow = YES;
+    self.ousButton.addTo(self.settingView).makeCons(^{
+        make.left.right.equal.view(self.settingView);
+        make.height.equal.constants(44);
+        make.top.equal.view(self.settingTitleLabel).bottom.constants(15);
+    });
+    
+    self.helpButton = [MeButton new];
+    self.helpButton.imageColor = [UIColor colorWithHexString:@"0xF3F4F6"];
+    self.helpButton.title = @"帮助中心";
+    self.helpButton.imageName = @"me_help";
+    self.helpButton.showArrow = YES;
+    self.helpButton.addTo(self.settingView).makeCons(^{
+        make.left.right.equal.view(self.settingView);
+        make.height.equal.constants(44);
+        make.top.equal.view(self.ousButton).bottom.constants(0);
+    });
+    
+    self.policyButton = [MeButton new];
+    self.policyButton.imageColor = [UIColor colorWithHexString:@"0xF3F4F6"];
+    self.policyButton.title = @"隐私政策";
+    self.policyButton.imageName = @"me_policy";
+    self.policyButton.showArrow = YES;
+    self.policyButton.addTo(self.settingView).makeCons(^{
+        make.left.right.equal.view(self.settingView);
+        make.height.equal.constants(44);
+        make.top.equal.view(self.helpButton).bottom.constants(0);
+    });
+    
+    
+    self.cacheButton = [MeButton new];
+    self.cacheButton.imageColor = [UIColor colorWithHexString:@"0xF3F4F6"];
+    self.cacheButton.title = @"清除缓存";
+    self.cacheButton.showArrow = NO;
+    self.cacheButton.imageName = @"me_cache";
+    self.cacheButton.addTo(self.settingView).makeCons(^{
+        make.left.right.equal.view(self.settingView);
+        make.height.equal.constants(44);
+        make.top.equal.view(self.policyButton).bottom.constants(0);
     });
 
 }

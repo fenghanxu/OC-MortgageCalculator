@@ -11,6 +11,8 @@
 @property (nonatomic, strong) UIView *bgView;
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *timeLabel;
+@property (nonatomic, strong) UIButton *collectionButton;
+@property (nonatomic, strong) UIButton *delectButton;
 
 @property (nonatomic, strong) UIView *loanAmountView;
 @property (nonatomic, strong) UILabel *loanAmountTitle;
@@ -69,6 +71,22 @@
     self.titleLabel.addTo(self.bgView).str(@"商业贷款 - 等额本息").fnt([UIFont boldSystemFontOfSize:14]).makeCons(^{
         make.left.equal.view(self.bgView).constants(15);
         make.top.equal.view(self.bgView).constants(15);
+    });
+    
+    self.delectButton = [UIButton new];
+    self.delectButton.addTo(self.bgView).img(@"历史_删除").makeCons(^{
+        make.right.equal.view(self.bgView).constants(-15);
+        make.centerY.equal.view(self.titleLabel);
+        make.width.height.equal.constants(30);
+    });
+
+    self.collectionButton = [UIButton new];
+    [self.collectionButton setImage:[UIImage imageNamed:@"history_collection_normal"] forState:UIControlStateNormal];
+    [self.collectionButton setImage:[UIImage imageNamed:@"history_collection_select"] forState:UIControlStateSelected];
+    self.collectionButton.addTo(self.bgView).makeCons(^{
+        make.right.equal.view(self.delectButton).left.constants(-15);
+        make.centerY.equal.view(self.titleLabel);
+        make.width.height.equal.constants(30);
     });
     
     self.timeLabel = [UILabel new];

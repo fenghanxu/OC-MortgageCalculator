@@ -48,27 +48,17 @@
     return _tableView;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBar.hidden = YES;
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.hidden = NO;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"收藏";
+    self.navigationItem.title = @"收藏";
     self.view.backgroundColor = [UIColor colorWithHexString:@"0xF9FAFB"];
 
     self.scrollView = [UIScrollView new];
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.showsVerticalScrollIndicator = NO;
-    self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH + 50, 70);
+    self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH + 70, 70);
     self.scrollView.addTo(self.view).makeCons(^{
-        make.top.equal.view(self.view).constants(TOTAL_TOP_HEIGHT(self));
+        make.top.equal.view(self.view);
         make.left.right.equal.view(self.view);
         make.height.equal.constants(70);
     });

@@ -42,23 +42,13 @@
     return _tableView;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBar.hidden = YES;
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.hidden = NO;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"历史";
+    self.navigationItem.title = @"收藏";
     self.view.backgroundColor = [UIColor colorWithHexString:@"0xF9FAFB"];
 
     self.tableView.makeCons(^{
-        make.top.equal.view(self.view).constants(TOTAL_TOP_HEIGHT(self));
+        make.top.equal.view(self.view);
         make.left.equal.view(self.view);
         make.right.equal.view(self.view);
         make.bottom.equal.view(self.view);
