@@ -37,6 +37,11 @@
     self.subtitleLabel.hidden = showArrow;
 }
 
+- (void)setCacheSize:(NSString *)cacheSize {
+    _cacheSize = cacheSize;
+    self.subtitleLabel.text = [NSString stringWithFormat:@"%@MB",cacheSize];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -45,6 +50,8 @@
     }
     return self;
 }
+
+
 
 -(void)buildUI {
     self.backgroundColor = [UIColor whiteColor];

@@ -45,10 +45,11 @@
     
     self.bgView = [UIView new];
     self.bgView.addTo(self).bgColor([UIColor whiteColor]).borderRadius(8).border(1,[Color line]).makeCons(^{
-        make.top.equal.view(self).constants(10);
+        make.top.equal.view(self).constants(15);
         make.left.equal.view(self).constants(15);
         make.right.equal.view(self).constants(-15);
-        make.bottom.equal.view(self).constants(-10);
+        make.bottom.equal.view(self).constants(-15);
+        
     });
     
     self.searchImageView = [UIImageView new];
