@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,   copy) NSString *imageName;
 @property (nonatomic,   copy) NSString *title;
 @property (nonatomic, assign) BOOL showArrow;
+@property (nonatomic,   copy) NSString *cacheSize;
 
 @end
 

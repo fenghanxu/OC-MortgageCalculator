@@ -18,7 +18,7 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] init];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _tableView.addTo(self.view);
         
         _tableView.delegate = self;
@@ -44,7 +44,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"收藏";
+    self.navigationItem.title = @"历史";
     self.view.backgroundColor = [UIColor colorWithHexString:@"0xF9FAFB"];
 
     self.tableView.makeCons(^{
@@ -64,7 +64,7 @@
 
 //设置组的头部的高度
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 65;
+    return 75;
 }
 
 //设置行数

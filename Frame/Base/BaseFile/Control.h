@@ -8,6 +8,7 @@
 #ifndef Control_h
 #define Control_h
 
+#import "DelectedPopupView.h"
 #import "SideAssistView.h"
 #import "CameraManager.h"
 #import "ImagePickerHelper.h"

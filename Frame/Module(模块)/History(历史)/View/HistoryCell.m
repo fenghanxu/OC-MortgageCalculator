@@ -172,7 +172,7 @@
     self.detailButton = [UIButton new];
     self.detailButton.lSpace = 5;
     [self.detailButton l_beginAdjustContentWithLContentAdjustType:LContentAdjustImageRightTitleLeft];
-    self.detailButton.addTo(self.bgView).img(@"detail_collection").str(@"查看详情").fnt(14).color([UIColor blueColor]).makeCons(^{
+    self.detailButton.addTo(self.bgView).img(@"collection_detail").str(@"查看详情").fnt(14).color([Color theme]).makeCons(^{
         make.right.equal.view(self.bgView).constants(-15);
         make.centerY.equal.view(self.monthlyPayment);
         make.width.equal.constants(90);

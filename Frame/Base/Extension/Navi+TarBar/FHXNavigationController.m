@@ -33,18 +33,18 @@
     //设置不透明
     self.navigationController.navigationBar.translucent = NO;
     //设置背景为白色
-    self.navigationBar.backgroundColor = [UIColor whiteColor];
+    self.navigationBar.backgroundColor = [UIColor colorWithHexString:@"0xF9FAFB"];
     //把导航栏底部的灰线改为白色
     [self.navigationBar setShadowImage:[UIImage new]];
     //把ContentView的白色设置为白色
-    [self.navigationBar setBackgroundImage:[UIImage createImageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationBar setBackgroundImage:[UIImage createImageWithColor:[UIColor colorWithHexString:@"0xF9FAFB"]] forBarMetrics:UIBarMetricsDefault];
     //设置标题栏颜色
     self.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName : [UIFont systemFontOfSize:18]};
     
     if (@available(iOS 13.0, *)) {
         UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
         [appearance configureWithOpaqueBackground];
-        appearance.backgroundColor = [UIColor whiteColor];
+        appearance.backgroundColor = [UIColor colorWithHexString:@"0xF9FAFB"];
         
         // iOS 13+ 隐藏底部阴影
         appearance.shadowColor = [UIColor clearColor];
@@ -64,7 +64,7 @@
             [self.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
         } else {
             CGRect navBounds = self.navigationController.navigationBar.bounds;
-            UIImage *img = [UIImage createImageWithColor:[UIColor whiteColor] withRect:navBounds];
+            UIImage *img = [UIImage createImageWithColor:[UIColor colorWithHexString:@"0xF9FAFB"] withRect:navBounds];
             NSData *imgData = UIImagePNGRepresentation(img);
             [[NSUserDefaults standardUserDefaults] setValue:imgData forKey:@"NavigationImageKey"];
             [[NSUserDefaults standardUserDefaults] synchronize];

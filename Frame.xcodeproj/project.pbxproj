@@ -21,10 +21,20 @@
 		2D1A621E2DAE07F700ACAF6E /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A62112DAE07F700ACAF6E /* NSString+MJExtension.m */; };
 		2D1A621F2DAE07F700ACAF6E /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A62122DAE07F700ACAF6E /* MJPropertyKey.m */; };
 		2D1A62202DAE07F700ACAF6E /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A62162DAE07F700ACAF6E /* MJFoundation.m */; };
+		2D1E6B7E2EB8490A00B07E31 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E6B7D2EB8490A00B07E31 /* RegisterViewController.m */; };
+		2D1E6B882EB87AE200B07E31 /* ResetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E6B872EB87AE200B07E31 /* ResetViewController.m */; };
 		2D23F9BA2D6D9107004F4D13 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D23F9B92D6D9107004F4D13 /* NetworkManager.m */; };
 		2D3B052C25D4F43E00A932C2 /* UIScrollView+WaterMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B052825D4F43E00A932C2 /* UIScrollView+WaterMarkView.m */; };
 		2D3B052E25D4F43E00A932C2 /* FHXWaterMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B052A25D4F43E00A932C2 /* FHXWaterMarkView.m */; };
 		2D3B053C25D54EDA00A932C2 /* PPNumberButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B053B25D54EDA00A932C2 /* PPNumberButton.m */; };
+		2D4F17032EB88D6500CA3FB7 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F17022EB88D6500CA3FB7 /* WebViewController.m */; };
+		2D4F17072EB897DB00CA3FB7 /* 关于我们.html in Resources */ = {isa = PBXBuildFile; fileRef = 2D4F17062EB897DB00CA3FB7 /* 关于我们.html */; };
+		2D4F17092EB899D000CA3FB7 /* 帮助中心.html in Resources */ = {isa = PBXBuildFile; fileRef = 2D4F17082EB899D000CA3FB7 /* 帮助中心.html */; };
+		2D4F170B2EB89BBF00CA3FB7 /* 隐私政策.html in Resources */ = {isa = PBXBuildFile; fileRef = 2D4F170A2EB89BBF00CA3FB7 /* 隐私政策.html */; };
+		2D4F170D2EB89F1100CA3FB7 /* 用户服务协议.html in Resources */ = {isa = PBXBuildFile; fileRef = 2D4F170C2EB89F1100CA3FB7 /* 用户服务协议.html */; };
+		2D4F17112EB8A08900CA3FB7 /* DelectedPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F170F2EB8A08900CA3FB7 /* DelectedPopupView.m */; };
+		2D4F17132EB8A5DC00CA3FB7 /* 房贷知识.html in Resources */ = {isa = PBXBuildFile; fileRef = 2D4F17122EB8A5DC00CA3FB7 /* 房贷知识.html */; };
+		2D4F17152EB8A7F600CA3FB7 /* 最新利率.html in Resources */ = {isa = PBXBuildFile; fileRef = 2D4F17142EB8A7F500CA3FB7 /* 最新利率.html */; };
 		2D59627725DFC9C200AAC1F4 /* FHXHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D59627225DFC9C200AAC1F4 /* FHXHUD.m */; };
 		2D59627825DFC9C200AAC1F4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D59627625DFC9C200AAC1F4 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		2D6281B22E8BB0D400C1A220 /* SideAssistView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6281B02E8BB0D400C1A220 /* SideAssistView.m */; };
@@ -101,6 +111,9 @@
 		2DB579B8264EC22000DEC811 /* Encryp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB579B7264EC22000DEC811 /* Encryp.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2DB579C1264EC6D200DEC811 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2DB579BE264EC6D200DEC811 /* README.md */; };
 		2DB579C2264EC6D200DEC811 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB579C0264EC6D200DEC811 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2DBA3C332EB9961D0042A124 /* CalculatorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA3C322EB9961D0042A124 /* CalculatorDetailViewController.m */; };
+		2DBA3C372EB9F8C20042A124 /* CalculatorDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA3C362EB9F8C20042A124 /* CalculatorDetailCell.m */; };
+		2DBA3C3A2EB9F9B40042A124 /* CalculatorDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA3C392EB9F9B40042A124 /* CalculatorDetailHeaderView.m */; };
 		2DC394D425D3785B00A72BCB /* FHXRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC394C625D3785B00A72BCB /* FHXRouter.m */; };
 		2DC394D525D3785B00A72BCB /* FHXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC394C825D3785B00A72BCB /* FHXAppDelegate.m */; };
 		2DC394D625D3785B00A72BCB /* FHXContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC394CA25D3785B00A72BCB /* FHXContext.m */; };
@@ -226,6 +239,10 @@
 		2D1A62142DAE07F700ACAF6E /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
 		2D1A62152DAE07F700ACAF6E /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
 		2D1A62162DAE07F700ACAF6E /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		2D1E6B7C2EB8490A00B07E31 /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		2D1E6B7D2EB8490A00B07E31 /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		2D1E6B862EB87AE200B07E31 /* ResetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResetViewController.h; sourceTree = "<group>"; };
+		2D1E6B872EB87AE200B07E31 /* ResetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResetViewController.m; sourceTree = "<group>"; };
 		2D23F9B82D6D9107004F4D13 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		2D23F9B92D6D9107004F4D13 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		2D3B052725D4F43E00A932C2 /* FHXWaterMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHXWaterMarkView.h; sourceTree = "<group>"; };
@@ -235,6 +252,16 @@
 		2D3B053225D4F62100A932C2 /* Control.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Control.h; sourceTree = "<group>"; };
 		2D3B053A25D54EDA00A932C2 /* PPNumberButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNumberButton.h; sourceTree = "<group>"; };
 		2D3B053B25D54EDA00A932C2 /* PPNumberButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNumberButton.m; sourceTree = "<group>"; };
+		2D4F17012EB88D6500CA3FB7 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		2D4F17022EB88D6500CA3FB7 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		2D4F17062EB897DB00CA3FB7 /* 关于我们.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "关于我们.html"; sourceTree = "<group>"; };
+		2D4F17082EB899D000CA3FB7 /* 帮助中心.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "帮助中心.html"; sourceTree = "<group>"; };
+		2D4F170A2EB89BBF00CA3FB7 /* 隐私政策.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "隐私政策.html"; sourceTree = "<group>"; };
+		2D4F170C2EB89F1100CA3FB7 /* 用户服务协议.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "用户服务协议.html"; sourceTree = "<group>"; };
+		2D4F170E2EB8A08900CA3FB7 /* DelectedPopupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DelectedPopupView.h; sourceTree = "<group>"; };
+		2D4F170F2EB8A08900CA3FB7 /* DelectedPopupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelectedPopupView.m; sourceTree = "<group>"; };
+		2D4F17122EB8A5DC00CA3FB7 /* 房贷知识.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "房贷知识.html"; sourceTree = "<group>"; };
+		2D4F17142EB8A7F500CA3FB7 /* 最新利率.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "最新利率.html"; sourceTree = "<group>"; };
 		2D59627225DFC9C200AAC1F4 /* FHXHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHXHUD.m; sourceTree = "<group>"; };
 		2D59627325DFC9C200AAC1F4 /* FHXHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHXHUD.h; sourceTree = "<group>"; };
 		2D59627525DFC9C200AAC1F4 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
@@ -385,6 +412,12 @@
 		2DB579BE264EC6D200DEC811 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2DB579BF264EC6D200DEC811 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		2DB579C0264EC6D200DEC811 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		2DBA3C312EB9961D0042A124 /* CalculatorDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorDetailViewController.h; sourceTree = "<group>"; };
+		2DBA3C322EB9961D0042A124 /* CalculatorDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorDetailViewController.m; sourceTree = "<group>"; };
+		2DBA3C352EB9F8C20042A124 /* CalculatorDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorDetailCell.h; sourceTree = "<group>"; };
+		2DBA3C362EB9F8C20042A124 /* CalculatorDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorDetailCell.m; sourceTree = "<group>"; };
+		2DBA3C382EB9F9B40042A124 /* CalculatorDetailHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorDetailHeaderView.h; sourceTree = "<group>"; };
+		2DBA3C392EB9F9B40042A124 /* CalculatorDetailHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorDetailHeaderView.m; sourceTree = "<group>"; };
 		2DC394C525D3785B00A72BCB /* FHXRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHXRouter.h; sourceTree = "<group>"; };
 		2DC394C625D3785B00A72BCB /* FHXRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHXRouter.m; sourceTree = "<group>"; };
 		2DC394C725D3785B00A72BCB /* FHXCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHXCommon.h; sourceTree = "<group>"; };
@@ -608,6 +641,40 @@
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
+		2D1E6B7A2EB848F900B07E31 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				2D1E6B7C2EB8490A00B07E31 /* RegisterViewController.h */,
+				2D1E6B7D2EB8490A00B07E31 /* RegisterViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		2D1E6B7B2EB848F900B07E31 /* Register(注册) */ = {
+			isa = PBXGroup;
+			children = (
+				2D1E6B7A2EB848F900B07E31 /* VC */,
+			);
+			path = "Register(注册)";
+			sourceTree = "<group>";
+		};
+		2D1E6B842EB87AC600B07E31 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				2D1E6B862EB87AE200B07E31 /* ResetViewController.h */,
+				2D1E6B872EB87AE200B07E31 /* ResetViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		2D1E6B852EB87AC600B07E31 /* Reset(重置密码) */ = {
+			isa = PBXGroup;
+			children = (
+				2D1E6B842EB87AC600B07E31 /* VC */,
+			);
+			path = "Reset(重置密码)";
+			sourceTree = "<group>";
+		};
 		2D23F9B72D6D9107004F4D13 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -620,6 +687,7 @@
 		2D3B052425D4F43E00A932C2 /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				2D4F17102EB8A08900CA3FB7 /* DelectedPopupView(删除弹窗) */,
 				2D6281B12E8BB0D400C1A220 /* SideAssistView(侧边辅助框) */,
 				2D9A4D532DCDAC0000D551ED /* CameraManager(拍照) */,
 				2D9A4D502DCDAC0000D551ED /* ImagePickerHelper(获取相册图片) */,
@@ -674,6 +742,46 @@
 				2D3B053B25D54EDA00A932C2 /* PPNumberButton.m */,
 			);
 			path = PPNumberButton;
+			sourceTree = "<group>";
+		};
+		2D4F16FE2EB88D5200CA3FB7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2D4F17142EB8A7F500CA3FB7 /* 最新利率.html */,
+				2D4F17122EB8A5DC00CA3FB7 /* 房贷知识.html */,
+				2D4F170C2EB89F1100CA3FB7 /* 用户服务协议.html */,
+				2D4F170A2EB89BBF00CA3FB7 /* 隐私政策.html */,
+				2D4F17062EB897DB00CA3FB7 /* 关于我们.html */,
+				2D4F17082EB899D000CA3FB7 /* 帮助中心.html */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2D4F16FF2EB88D5200CA3FB7 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				2D4F17012EB88D6500CA3FB7 /* WebViewController.h */,
+				2D4F17022EB88D6500CA3FB7 /* WebViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		2D4F17002EB88D5200CA3FB7 /* Web(网页) */ = {
+			isa = PBXGroup;
+			children = (
+				2D4F16FE2EB88D5200CA3FB7 /* Data */,
+				2D4F16FF2EB88D5200CA3FB7 /* VC */,
+			);
+			path = "Web(网页)";
+			sourceTree = "<group>";
+		};
+		2D4F17102EB8A08900CA3FB7 /* DelectedPopupView(删除弹窗) */ = {
+			isa = PBXGroup;
+			children = (
+				2D4F170E2EB8A08900CA3FB7 /* DelectedPopupView.h */,
+				2D4F170F2EB8A08900CA3FB7 /* DelectedPopupView.m */,
+			);
+			path = "DelectedPopupView(删除弹窗)";
 			sourceTree = "<group>";
 		};
 		2D59627025DFC9C200AAC1F4 /* ThirdParty */ = {
@@ -1319,6 +1427,10 @@
 		2DA1228E2EB0BCC900574D35 /* Module(模块) */ = {
 			isa = PBXGroup;
 			children = (
+				2DBA3C302EB995F90042A124 /* CalculatorDetail(计算详情) */,
+				2D4F17002EB88D5200CA3FB7 /* Web(网页) */,
+				2D1E6B852EB87AC600B07E31 /* Reset(重置密码) */,
+				2D1E6B7B2EB848F900B07E31 /* Register(注册) */,
 				8862CDDF2EB6157F003F33C5 /* Login(登录) */,
 				2DA1227B2EB0BCC900574D35 /* Calculator(计算器) */,
 				2DA122812EB0BCC900574D35 /* Collect(收藏) */,
@@ -1356,6 +1468,35 @@
 				2DB579C0264EC6D200DEC811 /* GTMBase64.m */,
 			);
 			path = GTMBase64;
+			sourceTree = "<group>";
+		};
+		2DBA3C2F2EB995F90042A124 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				2DBA3C312EB9961D0042A124 /* CalculatorDetailViewController.h */,
+				2DBA3C322EB9961D0042A124 /* CalculatorDetailViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		2DBA3C302EB995F90042A124 /* CalculatorDetail(计算详情) */ = {
+			isa = PBXGroup;
+			children = (
+				2DBA3C2F2EB995F90042A124 /* VC */,
+				2DBA3C342EB9F8A10042A124 /* View */,
+			);
+			path = "CalculatorDetail(计算详情)";
+			sourceTree = "<group>";
+		};
+		2DBA3C342EB9F8A10042A124 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DBA3C352EB9F8C20042A124 /* CalculatorDetailCell.h */,
+				2DBA3C362EB9F8C20042A124 /* CalculatorDetailCell.m */,
+				2DBA3C382EB9F9B40042A124 /* CalculatorDetailHeaderView.h */,
+				2DBA3C392EB9F9B40042A124 /* CalculatorDetailHeaderView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2DC394C325D3785B00A72BCB /* FHXContainer */ = {
@@ -2094,14 +2235,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DB579C1264EC6D200DEC811 /* README.md in Resources */,
+				2D4F170B2EB89BBF00CA3FB7 /* 隐私政策.html in Resources */,
 				2DEA411125D002E3008FA2A8 /* LaunchScreen.storyboard in Resources */,
 				7A19F1A926D8D1E900D249E6 /* private_key.p12 in Resources */,
 				2DEA410E25D002E3008FA2A8 /* Assets.xcassets in Resources */,
 				7A8F38B526FDAC5200F93A2E /* test.pdf in Resources */,
 				2D7B899E25D63FBC0079E4CE /* FHXConfirmView.xib in Resources */,
 				2D62DC1025DE4DF400A05E5E /* nahuoLoading.gif in Resources */,
+				2D4F17132EB8A5DC00CA3FB7 /* 房贷知识.html in Resources */,
+				2D4F170D2EB89F1100CA3FB7 /* 用户服务协议.html in Resources */,
+				2D4F17092EB899D000CA3FB7 /* 帮助中心.html in Resources */,
 				7A8ABFCC26D4784900220F99 /* AD.md in Resources */,
+				2D4F17152EB8A7F600CA3FB7 /* 最新利率.html in Resources */,
 				7A19F1A826D8D1E900D249E6 /* public_key.der in Resources */,
+				2D4F17072EB897DB00CA3FB7 /* 关于我们.html in Resources */,
 				2DEA410C25D002E1008FA2A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2177,6 +2324,7 @@
 				2DB579C2264EC6D200DEC811 /* GTMBase64.m in Sources */,
 				2DE4FC7025D24F7D007C208F /* NSMutableArray+Safe.m in Sources */,
 				2DE4FC9B25D2A4EA007C208F /* NSObject+FHXNSObject.m in Sources */,
+				2DBA3C372EB9F8C20042A124 /* CalculatorDetailCell.m in Sources */,
 				2DFB30E825D1545B00F74164 /* UILabel+FHXLabel.m in Sources */,
 				2D1A62192DAE07F700ACAF6E /* MJProperty.m in Sources */,
 				2D7B89A425D63FBC0079E4CE /* SelectTimeAreaTankuangView.m in Sources */,
@@ -2260,6 +2408,7 @@
 				2DE4FC5B25D24E19007C208F /* NSArray+Decription.m in Sources */,
 				2D7B883D25D5575A0079E4CE /* TAAnimatedDotView.m in Sources */,
 				2D62DBBB25DCB31B00A05E5E /* DelegateChooseGoodsVC.m in Sources */,
+				2DBA3C3A2EB9F9B40042A124 /* CalculatorDetailHeaderView.m in Sources */,
 				2DC394D625D3785B00A72BCB /* FHXContext.m in Sources */,
 				2DF1E99C25D0EDD700DAC221 /* NSString+FHXExtension.m in Sources */,
 				2DE4FCC325D2AFBE007C208F /* LoadPodImage.m in Sources */,
@@ -2312,12 +2461,16 @@
 				2D94B5C12D803645001F42EE /* ImageColorModel.m in Sources */,
 				2D102D172EB36379001ECD4C /* HistoryHeaderView.m in Sources */,
 				2DE690BD25D7CCC60073B9CE /* FHXResourceSheetView.m in Sources */,
+				2D1E6B7E2EB8490A00B07E31 /* RegisterViewController.m in Sources */,
 				2D1A621F2DAE07F700ACAF6E /* MJPropertyKey.m in Sources */,
+				2D1E6B882EB87AE200B07E31 /* ResetViewController.m in Sources */,
+				2DBA3C332EB9961D0042A124 /* CalculatorDetailViewController.m in Sources */,
 				2DE4FC7525D24F7D007C208F /* NSArray+Safe.m in Sources */,
 				2D3B052E25D4F43E00A932C2 /* FHXWaterMarkView.m in Sources */,
 				2DE690BE25D7CCC60073B9CE /* FHXAvatarPicker.m in Sources */,
 				2D7B884B25D6130F0079E4CE /* FHXNewPagedFlowView.m in Sources */,
 				2D7B89AE25D643660079E4CE /* NSCalendar+FHXCalendar.m in Sources */,
+				2D4F17112EB8A08900CA3FB7 /* DelectedPopupView.m in Sources */,
 				2DE4FC4B25D24BA0007C208F /* Single.m in Sources */,
 				2D102D0D2EB34410001ECD4C /* CollectViewCell.m in Sources */,
 				2DEA418225D0D284008FA2A8 /* FHXCancelHightBtn.m in Sources */,
@@ -2326,6 +2479,7 @@
 				2D7B89A525D63FBC0079E4CE /* FHXMaskBtn.m in Sources */,
 				2D1A621D2DAE07F700ACAF6E /* NSObject+MJClass.m in Sources */,
 				2DEA410625D002E1008FA2A8 /* SceneDelegate.m in Sources */,
+				2D4F17032EB88D6500CA3FB7 /* WebViewController.m in Sources */,
 				2D7B89A225D63FBC0079E4CE /* SelectTimeAreaPickerView.m in Sources */,
 				8862CDE22EB615AB003F33C5 /* LoginViewController.m in Sources */,
 			);

@@ -11,7 +11,10 @@
 #import "CollectViewController.h"
 #import "HistoryViewController.h"
 #import "MeViewController.h"
+
 #import "LoginViewController.h"
+#import "CalculatorDetailViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -28,7 +31,7 @@
 //    [tabBarVC setUpOneChildViewController:[[MeViewController alloc] init] image:@"me_normal" selectedImage:@"me_select" title:@"我的"];
 //    self.window.rootViewController = tabBarVC;
     
-    self.window.rootViewController = [LoginViewController new];
+    self.window.rootViewController = [[FHXNavigationController alloc] initWithRootViewController:[CalculatorDetailViewController new]];
     
     [self.window makeKeyAndVisible];
     return YES;

@@ -7,6 +7,8 @@
 
 #import "MeViewController.h"
 #import "MeButton.h"
+#import "WebViewController.h"
+#import "LoginViewController.h"
 
 @interface MeViewController ()
 @property (nonatomic,strong) UIScrollView *scrollView;
@@ -38,6 +40,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
+    self.cacheButton.cacheSize = [NSString stringWithFormat:@"%.2f",[[ClearCacheManager shareClearCacheManager] getCacheSize]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -56,7 +59,7 @@
     self.scrollView.addTo(self.view).makeCons(^{
         make.left.top.right.bottom.equal.view(self.view);
     });
-
+    
     self.containerView = [UIView new];
     self.containerView.backgroundColor = [UIColor colorWithHexString:@"0xF9FAFB"];
     self.containerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 830);
@@ -75,9 +78,9 @@
         make.top.equal.view(self.containerView).constants(15);
         make.height.equal.constants(250);
     });
-
+    
     self.headerImageView = [UIImageView new];
-    self.headerImageView.addTo(self.loginView).borderRadius(40).bgColor([[Color randomColor] colorWithAlphaComponent:0.5]).makeCons(^{
+    self.headerImageView.addTo(self.loginView).borderRadius(40).img(@"logo").border(2,[UIColor whiteColor]).makeCons(^{
         make.centerX.equal.view(self.loginView);
         make.top.equal.view(self.loginView).constants(15);
         make.width.height.constants(80);
@@ -103,6 +106,8 @@
         make.width.equal.constants(100);
         make.height.equal.constants(36);
         make.top.equal.view(self.loginSubTitleLabel).bottom.constants(15);
+    }).onClick(^{
+        [self.navigationController pushViewController:[LoginViewController new] animated:YES];
     });
     
     self.functionView = [UIView new];
@@ -134,6 +139,8 @@
         make.left.right.equal.view(self.functionView);
         make.height.equal.constants(44);
         make.top.equal.view(self.functionTitleLabel).bottom.constants(15);
+    }).onClick(^{
+        [GetVC tabbarController].selectedIndex = 1;
     });
     
     self.historyButton = [MeButton new];
@@ -145,6 +152,8 @@
         make.left.right.equal.view(self.functionView);
         make.height.equal.constants(44);
         make.top.equal.view(self.collectionButton).bottom.constants(0);
+    }).onClick(^{
+        [GetVC tabbarController].selectedIndex = 2;
     });
     
     self.interestRateButton = [MeButton new];
@@ -156,9 +165,12 @@
         make.left.right.equal.view(self.functionView);
         make.height.equal.constants(44);
         make.top.equal.view(self.historyButton).bottom.constants(0);
+    }).onClick(^{
+        WebViewController *vc = [WebViewController new];
+        vc.title = @"最新利率";
+        [self.navigationController pushViewController:vc animated:YES];
     });
-    
-    
+        
     self.knowledgeButton = [MeButton new];
     self.knowledgeButton.imageColor = [UIColor colorWithHexString:@"0xF3E8FF"];
     self.knowledgeButton.title = @"房产知识";
@@ -168,6 +180,10 @@
         make.left.right.equal.view(self.functionView);
         make.height.equal.constants(44);
         make.top.equal.view(self.interestRateButton).bottom.constants(0);
+    }).onClick(^{        
+        WebViewController *vc = [WebViewController new];
+        vc.title = @"房贷知识";
+        [self.navigationController pushViewController:vc animated:YES];
     });
     
     self.settingView = [UIView new];
@@ -199,6 +215,10 @@
         make.left.right.equal.view(self.settingView);
         make.height.equal.constants(44);
         make.top.equal.view(self.settingTitleLabel).bottom.constants(15);
+    }).onClick(^{
+        WebViewController *vc = [WebViewController new];
+        vc.title = @"关于我们";
+        [self.navigationController pushViewController:vc animated:YES];
     });
     
     self.helpButton = [MeButton new];
@@ -210,6 +230,10 @@
         make.left.right.equal.view(self.settingView);
         make.height.equal.constants(44);
         make.top.equal.view(self.ousButton).bottom.constants(0);
+    }).onClick(^{
+        WebViewController *vc = [WebViewController new];
+        vc.title = @"帮助中心";
+        [self.navigationController pushViewController:vc animated:YES];
     });
     
     self.policyButton = [MeButton new];
@@ -221,18 +245,28 @@
         make.left.right.equal.view(self.settingView);
         make.height.equal.constants(44);
         make.top.equal.view(self.helpButton).bottom.constants(0);
+    }).onClick(^{
+        WebViewController *vc = [WebViewController new];
+        vc.title = @"隐私政策";
+        [self.navigationController pushViewController:vc animated:YES];
     });
     
-    
+     ;
     self.cacheButton = [MeButton new];
     self.cacheButton.imageColor = [UIColor colorWithHexString:@"0xF3F4F6"];
     self.cacheButton.title = @"清除缓存";
     self.cacheButton.showArrow = NO;
     self.cacheButton.imageName = @"me_cache";
+    self.cacheButton.cacheSize = [NSString stringWithFormat:@"%.2f",[[ClearCacheManager shareClearCacheManager] getCacheSize]];
     self.cacheButton.addTo(self.settingView).makeCons(^{
         make.left.right.equal.view(self.settingView);
         make.height.equal.constants(44);
         make.top.equal.view(self.policyButton).bottom.constants(0);
+    }).onClick(^{
+        [DelectedPopupView showWithTestActionWindow:KEY_WINDOW WithBlock:^(NSString * _Nonnull value) {
+            [[ClearCacheManager shareClearCacheManager] removeCache];
+            self.cacheButton.cacheSize = @"0";
+        }];
     });
 
 }
