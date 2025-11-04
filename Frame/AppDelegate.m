@@ -24,14 +24,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];    
-//    FHXTabBarController *tabBarVC = [[FHXTabBarController alloc]init];
-//    [tabBarVC setUpOneChildViewController:[[CalculatorViewController alloc] init] image:@"calculator_normal" selectedImage:@"calculator_select" title:@"计算器"];
-//    [tabBarVC setUpOneChildViewController:[[CollectViewController alloc] init] image:@"collect_normal" selectedImage:@"collect_select" title:@"收藏"];
-//    [tabBarVC setUpOneChildViewController:[[HistoryViewController alloc] init] image:@"history_normal" selectedImage:@"history_select" title:@"历史"];
-//    [tabBarVC setUpOneChildViewController:[[MeViewController alloc] init] image:@"me_normal" selectedImage:@"me_select" title:@"我的"];
-//    self.window.rootViewController = tabBarVC;
+    FHXTabBarController *tabBarVC = [[FHXTabBarController alloc]init];
+    [tabBarVC setUpOneChildViewController:[[CalculatorViewController alloc] init] image:@"calculator_normal" selectedImage:@"calculator_select" title:@"计算器"];
+    [tabBarVC setUpOneChildViewController:[[CollectViewController alloc] init] image:@"collect_normal" selectedImage:@"collect_select" title:@"收藏"];
+    [tabBarVC setUpOneChildViewController:[[HistoryViewController alloc] init] image:@"history_normal" selectedImage:@"history_select" title:@"历史"];
+    [tabBarVC setUpOneChildViewController:[[MeViewController alloc] init] image:@"me_normal" selectedImage:@"me_select" title:@"我的"];
+    self.window.rootViewController = tabBarVC;
     
-    self.window.rootViewController = [[FHXNavigationController alloc] initWithRootViewController:[CalculatorDetailViewController new]];
+//    self.window.rootViewController = [[FHXNavigationController alloc] initWithRootViewController:[CalculatorDetailViewController new]];
     
     [self.window makeKeyAndVisible];
     return YES;

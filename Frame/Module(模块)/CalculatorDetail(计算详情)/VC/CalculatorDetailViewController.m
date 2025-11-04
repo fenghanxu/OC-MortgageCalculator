@@ -8,8 +8,10 @@
 #import "CalculatorDetailViewController.h"
 #import "CalculatorDetailCell.h"
 #import "CalculatorDetailHeaderView.h"
+#import "RepaymentDetailSubView.h"
 
-@interface CalculatorDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface CalculatorDetailViewController ()
+
 @property (nonatomic, strong) UIScrollView  *scrollView;
 @property (nonatomic, strong) UIView        *containerView;
 
@@ -40,42 +42,22 @@
 
 @property (nonatomic, strong) UIView        *repaymentDetailView;
 @property (nonatomic, strong) UILabel       *repaymentDetailLabel;
-@property (nonatomic, strong) UIButton      *repaymentDetailButton;
-@property (nonatomic, strong) UITableView   *tableView;
+
+@property (nonatomic, strong) CalculatorDetailHeaderView *repaymentDetailHeaderView;
+
+@property (nonatomic, assign) NSInteger     number;
+
 
 @end
 
 @implementation CalculatorDetailViewController
 
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
-        _tableView.addTo(self.view);
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        _tableView.backgroundColor = [UIColor whiteColor];
-        _tableView.showsVerticalScrollIndicator = NO;
-        _tableView.showsHorizontalScrollIndicator = NO;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _tableView.bounces = NO;
-        _tableView.rowHeight = 44;
-        [_tableView registerClass:[CalculatorDetailCell class] forCellReuseIdentifier:@"CalculatorDetailCellID"];
-        //为解决tableview  Group的问题
-        _tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, CGFLOAT_MIN)];
-        _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, CGFLOAT_MIN)];
-        _tableView.sectionHeaderHeight = CGFLOAT_MIN;
-        _tableView.sectionFooterHeight = CGFLOAT_MIN;
-        //为解决ios11 后tableview刷新跳动的问题
-        _tableView.estimatedRowHeight = 0;
-        _tableView.estimatedSectionHeaderHeight = 0;
-        _tableView.estimatedSectionFooterHeight = 0;
-    }
-    return _tableView;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"计算结果";
     self.view.backgroundColor = [UIColor colorWithHexString:@"0xF9FAFB"];
+    
+    self.number = 5;
     
     self.scrollView = [UIScrollView new];
     self.scrollView.showsHorizontalScrollIndicator = NO;
@@ -91,6 +73,11 @@
     [self.scrollView addSubview:self.containerView];
     
     self.resultView = [UIView new];
+    self.resultView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.resultView.layer.shadowOffset = CGSizeMake(0, 2);
+    self.resultView.layer.shadowOpacity = 0.1;
+    self.resultView.layer.shadowRadius = 3;
+    self.resultView.layer.masksToBounds = NO;
     [self.resultView az_setGradientBackgroundWithColors:@[[UIColor colorWithHexString:@"0x228B22"], [Color theme]] locations:nil startPoint:CGPointMake(1, 0) endPoint:CGPointMake(0, 1)];
     self.resultView.addTo(self.containerView).borderRadius(16).makeCons(^{
         make.left.equal.view(self.containerView).constants(15);
@@ -166,6 +153,11 @@
     });
     
     self.loanInformationView = [UIView new];
+    self.loanInformationView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.loanInformationView.layer.shadowOffset = CGSizeMake(0, 2);
+    self.loanInformationView.layer.shadowOpacity = 0.1;
+    self.loanInformationView.layer.shadowRadius = 3;
+    self.loanInformationView.layer.masksToBounds = NO;
     self.loanInformationView.addTo(self.containerView).bgColor([UIColor whiteColor]).borderRadius(16).makeCons(^{
         make.left.equal.view(self.containerView).constants(15);
         make.right.equal.view(self.containerView).constants(-15);
@@ -237,11 +229,16 @@
     });
     
     self.repaymentDetailView = [UIView new];
+    self.repaymentDetailView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.repaymentDetailView.layer.shadowOffset = CGSizeMake(0, 2);
+    self.repaymentDetailView.layer.shadowOpacity = 0.1;
+    self.repaymentDetailView.layer.shadowRadius = 3;
+    self.repaymentDetailView.layer.masksToBounds = NO;
     self.repaymentDetailView.addTo(self.containerView).bgColor([UIColor whiteColor]).borderRadius(16).makeCons(^{
         make.left.equal.view(self.containerView).constants(15);
         make.right.equal.view(self.containerView).constants(-15);
         make.top.equal.view(self.loanInformationView).bottom.constants(15);
-        make.height.equal.constants(410);
+        make.height.equal.constants(112+self.number*44);
     });
     
     self.repaymentDetailLabel = [UILabel new];
@@ -250,22 +247,27 @@
         make.left.equal.view(self.repaymentDetailView).constants(15);
         make.top.equal.view(self.repaymentDetailView).constants(20);
     });
-    
-    self.repaymentDetailButton = [UIButton new];
-    self.repaymentDetailButton.lSpace = 5;
-    [self.repaymentDetailButton l_beginAdjustContentWithLContentAdjustType:LContentAdjustImageRightTitleLeft];
-    self.repaymentDetailButton.addTo(self.repaymentDetailView).img(@"collection_detail").str(@"查看全部还款计划").fnt(14).color([Color theme]).makeCons(^{
-        make.left.bottom.right.equal.view(self.repaymentDetailView);
-        make.height.equal.constants(50);
-    });
-    
-    self.tableView.makeCons(^{
+
+    self.repaymentDetailHeaderView = [CalculatorDetailHeaderView new];
+    self.repaymentDetailHeaderView.addTo(self.repaymentDetailView).makeCons(^{
+        make.left.right.equal.view(self.repaymentDetailView);
         make.top.equal.view(self.repaymentDetailLabel).bottom.constants(15);
-        make.left.equal.view(self.repaymentDetailView);
-        make.right.equal.view(self.repaymentDetailView);
-        make.bottom.equal.view(self.repaymentDetailButton).top.constants(0);
+        make.height.equal.constants(44);
     });
     
+    UIView *lastView = self.repaymentDetailHeaderView;
+    for (NSInteger i = 0; i < self.number; i++) {
+        RepaymentDetailSubView *subView = [RepaymentDetailSubView new];
+
+        subView.addTo(self.repaymentDetailView).makeCons(^{
+            make.left.right.equal.view(self.repaymentDetailView);
+            make.top.equal.view(lastView).bottom.constants(0);
+            make.height.equal.constants(44);
+        });
+        
+        lastView = subView;
+    }
+  
 }
 
 - (NSString *)formatNumberString:(NSString *)numberString {
@@ -297,29 +299,6 @@
         return numberString;
     }
 }
-
-#pragma mark - UITableViewDataSource, UITableViewDelegate
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return [[CalculatorDetailHeaderView alloc] init];
-}
-
-//设置组的头部的高度
-- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 44;
-}
-
-//设置行数
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
-}
-
-//cell的内容
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CalculatorDetailCell *cell = [CalculatorDetailCell cellWithTableView:tableView];
-
-    return cell;
-}
-
 
 @end
 
