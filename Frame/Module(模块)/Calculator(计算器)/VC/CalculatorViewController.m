@@ -6,6 +6,7 @@
 //
 
 #import "CalculatorViewController.h"
+#import "CalculatorDetailViewController.h"
 
 @interface CalculatorViewController ()<UITextFieldDelegate>
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -388,6 +389,8 @@
         make.left.equal.view(self.containerView).constants(15);
         make.right.equal.view(self.containerView).constants(-15);
         make.height.equal.constants(60);
+    }).onClick(^{
+        [self.navigationController pushViewController:[CalculatorDetailViewController new] animated:YES];
     });
 }
 

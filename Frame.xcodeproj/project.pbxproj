@@ -186,6 +186,7 @@
 		7AC0BCF726F5E5F200611CF2 /* QRCodeScanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC0BCF626F5E5F200611CF2 /* QRCodeScanVC.m */; };
 		8862CDDC2EB4C542003F33C5 /* MeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8862CDDB2EB4C542003F33C5 /* MeButton.m */; };
 		8862CDE22EB615AB003F33C5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8862CDE12EB615AB003F33C5 /* LoginViewController.m */; };
+		887427542EBA255400FAEBAD /* RepaymentDetailSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 887427532EBA255400FAEBAD /* RepaymentDetailSubView.m */; };
 		B24A8DB92713C1B70021CD31 /* Sandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = B24A8DB72713C1B70021CD31 /* Sandbox.m */; };
 		B2F933E427A4E67D00FC78BB /* NSObject+Chain_hx.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F933E227A4E67D00FC78BB /* NSObject+Chain_hx.m */; };
 		EF2BF7E6882DC4D4911E05D3 /* libPods-Frame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03351BF5F8F17E8147C5D197 /* libPods-Frame.a */; };
@@ -571,6 +572,8 @@
 		8862CDDB2EB4C542003F33C5 /* MeButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeButton.m; sourceTree = "<group>"; };
 		8862CDE02EB615AB003F33C5 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		8862CDE12EB615AB003F33C5 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		887427522EBA255400FAEBAD /* RepaymentDetailSubView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepaymentDetailSubView.h; sourceTree = "<group>"; };
+		887427532EBA255400FAEBAD /* RepaymentDetailSubView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepaymentDetailSubView.m; sourceTree = "<group>"; };
 		B24A8DB72713C1B70021CD31 /* Sandbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sandbox.m; sourceTree = "<group>"; };
 		B24A8DB82713C1B70021CD31 /* Sandbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sandbox.h; sourceTree = "<group>"; };
 		B2F933E227A4E67D00FC78BB /* NSObject+Chain_hx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Chain_hx.m"; sourceTree = "<group>"; };
@@ -1495,6 +1498,8 @@
 				2DBA3C362EB9F8C20042A124 /* CalculatorDetailCell.m */,
 				2DBA3C382EB9F9B40042A124 /* CalculatorDetailHeaderView.h */,
 				2DBA3C392EB9F9B40042A124 /* CalculatorDetailHeaderView.m */,
+				887427522EBA255400FAEBAD /* RepaymentDetailSubView.h */,
+				887427532EBA255400FAEBAD /* RepaymentDetailSubView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2398,6 +2403,7 @@
 				2DC394D725D3785B00A72BCB /* FHXAnnotation.m in Sources */,
 				2D7B883C25D5575A0079E4CE /* TAPageControl.m in Sources */,
 				2DFB30A325D0FE5100F74164 /* BinarySystem.m in Sources */,
+				887427542EBA255400FAEBAD /* RepaymentDetailSubView.m in Sources */,
 				2D102D112EB35BF0001ECD4C /* UIButton+SFSButton.m in Sources */,
 				2D7B89DF25D6855A0079E4CE /* AdvertiseGradientView.m in Sources */,
 				2D7B89A125D63FBC0079E4CE /* SelectTimeAreaViewItem.m in Sources */,
