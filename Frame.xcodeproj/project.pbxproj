@@ -112,7 +112,6 @@
 		2DB579C1264EC6D200DEC811 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2DB579BE264EC6D200DEC811 /* README.md */; };
 		2DB579C2264EC6D200DEC811 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB579C0264EC6D200DEC811 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2DBA3C332EB9961D0042A124 /* CalculatorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA3C322EB9961D0042A124 /* CalculatorDetailViewController.m */; };
-		2DBA3C372EB9F8C20042A124 /* CalculatorDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA3C362EB9F8C20042A124 /* CalculatorDetailCell.m */; };
 		2DBA3C3A2EB9F9B40042A124 /* CalculatorDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA3C392EB9F9B40042A124 /* CalculatorDetailHeaderView.m */; };
 		2DC394D425D3785B00A72BCB /* FHXRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC394C625D3785B00A72BCB /* FHXRouter.m */; };
 		2DC394D525D3785B00A72BCB /* FHXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC394C825D3785B00A72BCB /* FHXAppDelegate.m */; };
@@ -415,8 +414,6 @@
 		2DB579C0264EC6D200DEC811 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		2DBA3C312EB9961D0042A124 /* CalculatorDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorDetailViewController.h; sourceTree = "<group>"; };
 		2DBA3C322EB9961D0042A124 /* CalculatorDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorDetailViewController.m; sourceTree = "<group>"; };
-		2DBA3C352EB9F8C20042A124 /* CalculatorDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorDetailCell.h; sourceTree = "<group>"; };
-		2DBA3C362EB9F8C20042A124 /* CalculatorDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorDetailCell.m; sourceTree = "<group>"; };
 		2DBA3C382EB9F9B40042A124 /* CalculatorDetailHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorDetailHeaderView.h; sourceTree = "<group>"; };
 		2DBA3C392EB9F9B40042A124 /* CalculatorDetailHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorDetailHeaderView.m; sourceTree = "<group>"; };
 		2DC394C525D3785B00A72BCB /* FHXRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHXRouter.h; sourceTree = "<group>"; };
@@ -1494,8 +1491,6 @@
 		2DBA3C342EB9F8A10042A124 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2DBA3C352EB9F8C20042A124 /* CalculatorDetailCell.h */,
-				2DBA3C362EB9F8C20042A124 /* CalculatorDetailCell.m */,
 				2DBA3C382EB9F9B40042A124 /* CalculatorDetailHeaderView.h */,
 				2DBA3C392EB9F9B40042A124 /* CalculatorDetailHeaderView.m */,
 				887427522EBA255400FAEBAD /* RepaymentDetailSubView.h */,
@@ -2329,7 +2324,6 @@
 				2DB579C2264EC6D200DEC811 /* GTMBase64.m in Sources */,
 				2DE4FC7025D24F7D007C208F /* NSMutableArray+Safe.m in Sources */,
 				2DE4FC9B25D2A4EA007C208F /* NSObject+FHXNSObject.m in Sources */,
-				2DBA3C372EB9F8C20042A124 /* CalculatorDetailCell.m in Sources */,
 				2DFB30E825D1545B00F74164 /* UILabel+FHXLabel.m in Sources */,
 				2D1A62192DAE07F700ACAF6E /* MJProperty.m in Sources */,
 				2D7B89A425D63FBC0079E4CE /* SelectTimeAreaTankuangView.m in Sources */,

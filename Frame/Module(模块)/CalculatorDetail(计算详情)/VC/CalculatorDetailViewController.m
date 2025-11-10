@@ -6,7 +6,6 @@
 //
 
 #import "CalculatorDetailViewController.h"
-#import "CalculatorDetailCell.h"
 #import "CalculatorDetailHeaderView.h"
 #import "RepaymentDetailSubView.h"
 
