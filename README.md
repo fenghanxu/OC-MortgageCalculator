@@ -14,35 +14,11 @@
 
 ## 📸 Preview
 
-
-
 <p align="center">
-  <img src="images/登录.jpg" width="300">
+  <img src="images/11111.gif" width="300">
 </p>
 
-<p align="center">
-  <img src="images/计算页面.jpg" width="300">
-</p>
 
-<p align="center">
-  <img src="images/历史.jpg" width="300">
-</p>
-
-<p align="center">
-  <img src="images/收藏.jpg" width="300">
-</p>
-
-<p align="center">
-  <img src="images/我的.jpg" width="300">
-</p>
-
-<p align="center">
-  <img src="images/详情页.jpg" width="300">
-</p>
-
-<p align="center">
-  <img src="images/注册.jpg" width="300">
-</p>
 
 ## 🚀 Usage
 
